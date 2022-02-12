@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily Planner | 2021</title>
+        <link rel="stylesheet" href="normalize.css"/>
+        <link rel="stylesheet" href="css/all.min.css"/>
+        <link rel="stylesheet" href="css/to-do.css"/>
+    
+    </head>
+    <body>
+
+        <!-- HOME -->
+
+        <div class="home">
+          <div class="container">
+            <div class="header">
+              <p>Good Morning, Basma!</p>
+              <span id="header"></span>
+            </div>
+            <div class="notes">
+              <div class="head">
+                <h2>Notes</h2>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+              <div class="input">
+                <input id="activity-input" type="text" placeholder="Today's Activities">
+                <button class="submit" id="submit-activity" type="submit">+</button>
+                <input id="details-input" type="text" placeholder="More Details">
+              </div>
+              <div class="tasks" id="tasks">
+                <div class="task">
+                  <h2 id="task-name">Hello, Sweety</h2>
+                  <p>How are you feeling today?</p>
+                  <img src="images/pexels-sunsetoned-6536119.jpg" alt="">
+                  <button class="delete">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Calendar -->
+        <div class="calender">
+            <div class="container">
+                <div class="header">
+                    <div id="monthDisplay"></div>
+                    <h3>Daily Planner</h3>
+                    <div class="icons">
+                        <i class="fas fa-chevron-left" id="backButton"></i>
+                        <i class="fas fa-chevron-right" id="nextButton"></i>
+                    </div>
+                </div>
+                <div class="week">
+                    <div class="day">SUN</div>
+                    <div class="day">MON</div>
+                    <div class="day">TUE</div>
+                    <div class="day">WED</div>
+                    <div class="day">THU</div>
+                    <div class="day">FRI</div>
+                    <div class="day">SAT</div>
+                </div>
+                <div class="calender-app">
+                </div>
+            </div>
+        </div>
+
+        <div id="newEventModal">
+            <div class="container">
+              <div class="child">
+                <div class="first">
+                    <h2>New Event</h2>
+                    <input id="eventTitleInput" placeholder="Event Title" />
+                    <input id="eventTitleInput-2" placeholder="Event Title" />
+                    <input id="eventTitleInput-3" placeholder="Event Title" />
+                    <button id="saveButton">Save</button>
+                    <button id="cancelButton">Cancel</button>
+                    <img class="cherry" src="stickers/icons8-cherry-100.png" alt="">
+                    <img class="leaves" src="stickers/icons8-leaves-128.png" alt="">
+                    <img class="ice" src="stickers/icons8-kawaii-ice-cream-100.png" alt="">
+                </div>
+                <div class="second">
+                  <img src="images/pexels-helena-lopes-2253275.jpg" alt="">
+                </div>
+                </div>
+                <div class="child active">
+                    <img src="images/pexels-eberhard-grossgasteiger-1612461.jpg" alt="">
+                    <div class="icns">
+                      <img class="br" src="stickers/icons8-broccoli-100.png" alt="">
+                          <img class="coff" src="stickers/icons8-iced-coffee-100.png" alt="">
+                          <img class="egg" src="stickers/icons8-sunny-side-up-eggs-100.png" alt="">
+                    </div>
+                </div>
+                <!-- <div class="child">
+                    <div class="second">
+                        <img src="images/pexels-helena-lopes-2253275.jpg" alt="">
+                    </div>
+                    <div class="first active">
+                        <h2>New Event</h2>
+                        <input id="eventTitleInput" placeholder="Event Title" />
+                        <button id="saveButton">Save</button>
+                        <button id="cancelButton">Cancel</button>
+                        <img class="br" src="stickers/icons8-broccoli-100.png" alt="">
+                        <img class="coff" src="stickers/icons8-iced-coffee-100.png" alt="">
+                        <img class="egg" src="stickers/icons8-sunny-side-up-eggs-100.png" alt="">
+                    </div>
+                </div> -->
+            </div>
+          </div>
+      
+          <div id="deleteEventModal">
+            <div class="container">
+                <div class="elephant">
+                  <p>Good Morning, Basma!</p>
+                  <span id='Date'></span>
+                </div>
+                <div class="content-box">
+                  <div class="content not-active">
+                    <h2>Events For Today</h2>
+                    <p id="eventText"></p>
+                    <button id="deleteButton">Delete</button>
+                    <button id="closeButton">Close</button>
+                  </div>
+                  <div class="content active">
+                    <h2 class="active">Mornings By Goals</h2>
+                    <h3>What do you wanna do Today?</h3>
+                    <div>
+                      <div class="icns">
+                        <img src="stickers/icons8-apple-logo-100.png" alt="">
+                        <img src="stickers/icons8-avocado-100.png" alt="">
+                        <img src="stickers/icons8-bee-16.png" alt="">
+                        <img src="stickers/icons8-broccoli-100.png" alt="">
+                      </div>
+                      <div class="text">
+                          <h4>Take It Easy</h4>
+                          <span>
+                            <p>make the bed</p>
+                            <p>prepare tea or coffee</p>
+                          </span>
+                          <span>
+                            <p>do some streches</p>
+                          <p>write your to-do list</p>
+                          </span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="icns">
+                        <img src="stickers/icons8-cherry-100.png" alt="">
+                        <img src="stickers/icons8-homer-simpson-200.png" alt="">
+                        <img src="stickers/icons8-iced-coffee-100.png" alt="">
+                        <img src="stickers/icons8-kawaii-ice-cream-100.png" alt="">
+                      </div>
+                      <div class="text">
+                          <h4>Get Energized</h4>
+                          <span>
+                            <p>Get some sun</p>
+                            <p>Move body for 20 mins</p>
+                          </span>
+                          <span>
+                            <p>Eat healthy breakfast</p>
+                            <p>Drink Enough Water </p>
+                          </span>
+                      </div>
+                    </div>
+                    <div class="active">
+                      <div class="icns">
+                        <img src="stickers/icons8-leaves-128.png" alt="">
+                        <img src="stickers/icons8-milkshake-100.png" alt="">
+                        <img src="stickers/icons8-reef-128.png" alt="">
+                        <img src="stickers/icons8-subway-surfers-200.png" alt="">
+                      </div>
+                      <div class="text">
+                          <h4>Beat Bordeom</h4>
+                          <span>
+                            <p>tidy your space</p>
+                          <p>listen to a podcast</p>
+                          </span>
+                          <span>
+                            <p>try a new recipe</p>
+                          <p>explore a new hoppy or interest</p>
+                          </span>
+                      </div>
+                    </div>
+                    <div class="active">
+                      <div class="icns">
+                        <img src="stickers/icons8-sunny-side-up-eggs-100.png" alt="#">
+                        <img src="stickers/icons8-tsunami-100.png" alt="#">
+                        <img src="stickers/icons8-whale-128.png" alt="#">
+                        <img src="stickers/icons8-avocado-100.png" alt="#">
+                      </div>
+                      <div class="text">
+                          <h4>connect with yourself</h4>
+                          <span>
+                            <p>spend time outdoor and take a walk</p>
+                          </span>
+                          <span>
+                            <p>write down wht you're gratful for</p>
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      
+          <div id="modalBackDrop"></div>
+      
+
+        <script src="to-do.js"></script>
+
+
+        <!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App Vanilla JS</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal">
+      <h2>New Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+         -->
+    </body>
+</html>
